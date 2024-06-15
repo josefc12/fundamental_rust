@@ -1,4 +1,3 @@
-
 //This is the structure of Node.
 struct TreeNode<K, V> where K:PartialOrd + PartialEq { //Accept only those types, that implement PartialOrd and PartialEq
     key: K,
@@ -31,7 +30,7 @@ impl<K, V> TreeNode<K, V> where K:PartialOrd + PartialEq {
             }
         //Else if the key is greater than the key of self, look into the greater parameter.
         } else {
-            match self.greater {
+            match self.greater { 
                 //If there's no greater TreeNode, create one
                 None => {
                     self.greater = Some(
