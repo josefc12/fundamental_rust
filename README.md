@@ -1,2 +1,3 @@
 # fundamental_rust
-Some fundamental code based on book tutorials.
+Fundamentals. See if I can actually learn something from books. This code is original.
+[15.06.24] - Except for the binary_tree, that's typed out based on what the book did.
