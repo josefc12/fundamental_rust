@@ -1,4 +1,4 @@
-use std::{borrow::Borrow, cell::RefCell, fmt::Display, rc::Rc};
+use std::{cell::RefCell, fmt::Display, rc::Rc};
 
 
 type DoublyListNodeAlias<V> = Option<Rc<RefCell<DoublyListNode<V>>>>;

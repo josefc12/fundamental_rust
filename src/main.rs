@@ -7,15 +7,17 @@ fn main() {
     //Example usage of the binary_tree ---------------------------------------------------
     let mut tree: binary_tree::Tree<&'static str, f32> = binary_tree::Tree::new();
 
-    tree.set("first key", 12.65);
-    tree.set("second key", 99.999);
-    tree.set("third key", -128.5);
-    tree.set("fourth key", 67.21);
+    tree.add("first key", 12.65);
+    tree.add("second key", 99.999);
+    tree.add("third key", -128.5);
+    tree.add("fourth key", 67.21);
 
-    println!("tree.get_ref(\"third key\") is {}", match tree.get_ref("third key") {
-        Err(_) => {println!("Invalid!"); &0.0},
-        Ok(x) => x,
-    });
+    let result:String = match tree.get_ref("second key") {
+        Err(e)=> String::from(e.to_string()),
+        Ok(v)=> String::from(v.to_string())
+    };
+
+    println!("Tree result: {}", &result);
     //------------------------------------------------------------------------------------
 
     println!("---------------------------------------------------------------");
